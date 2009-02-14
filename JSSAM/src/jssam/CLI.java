@@ -54,7 +54,7 @@ public class CLI {
         options.addOption(sort);
 
         // add zip output option - no arg required
-        Option zip = OptionBuilder.withArgName("zip output").withDescription("specify compression of output file (zip)").create("z");
+        Option zip = OptionBuilder.withArgName("zip output").withDescription("specify compression of output file (zip) - DISABLED").create("z");
         options.addOption(zip);
 
         // add help
@@ -117,6 +117,7 @@ public class CLI {
             }
 
             if (cmd.hasOption("z")) {
+                //DISABLED
                 core.setZipOption(true);
             }
 
@@ -134,7 +135,6 @@ public class CLI {
         } catch (ParseException e) {
             // if arguments missing for specified options
             displayHelp(options);
-        } finally {
         }
     }
 
@@ -143,7 +143,7 @@ public class CLI {
      */
     public final void displayHelp(Options options) {
 
-        final String HELP_DESC = "DESCRIPTION:\n" + "Merge Essbase SSAudit files together (.ATX, .ATG)\n";
+        final String HELP_DESC = "DESCRIPTION:\n" + "Merge Essbase SSAudit files (.ATX, .ATG) to a single file.\n";
 
         final String HELP_USAGESAMPLE = "USAGE SAMPLE:\n" + "";
 
@@ -151,7 +151,7 @@ public class CLI {
 
         final String HELP_VERS = "VERSION:\n" + "version 0.9\n";
 
-        final String HELP_AUTH = "AUTHOR:\n" + "Proudly coded & released for the Essbase community around the world by Sebastien Roux <roux.sebastien@gmail.com>\n";
+        final String HELP_AUTH = "AUTHOR:\n" + "Proudly coded & released for the Essbase community by Sebastien Roux <roux.sebastien@gmail.com>\n";
 
         final String HELP_SITE = "SITE:\n" + "http://code.google.com/p/jssauditmerger/\n";
 
