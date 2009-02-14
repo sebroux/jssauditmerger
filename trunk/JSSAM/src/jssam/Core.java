@@ -93,6 +93,15 @@ public class Core {
     public static void setZipOption(Boolean zipOption) {
         Core.zipOption = zipOption;
     }
+    private static Integer fileCounter = 0;
+
+    public static Integer getFileCounter() {
+        return fileCounter;
+    }
+
+    public static void setFileCounter(Integer fileCounter) {
+        Core.fileCounter = fileCounter;
+    }
 
     public static void go() {
 
@@ -122,14 +131,12 @@ public class Core {
             File output = new File(getOutputFile());
             FileWriter out = new FileWriter(output);
 
-            Integer fileCounter = 0;
-
             // Loop directory array into variable
             for (File inputFile : inputFiles) {
 
                 // Match alg file
                 if (regEx.match("/\\." + ALG_EXTENSION + "$/", inputFile.getName())) {
-                    fileCounter = fileCounter + 1;
+                    setFileCounter(fileCounter + 1);
 
                     // Get current file
                     fileAlg = new File(getInputDir(), inputFile.getName());
@@ -380,7 +387,6 @@ public class Core {
         String target = getOutputFile().toString().substring(0, getOutputFile().length() - 3) + ZIP_EXTENSION;
         try {
             ZipOutputStream out = new ZipOutputStream(new FileOutputStream(target));
-
             // Compress the files
             FileInputStream in = new FileInputStream(source);
 

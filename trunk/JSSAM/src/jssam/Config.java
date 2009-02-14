@@ -40,20 +40,27 @@ public class Config {
     @SuppressWarnings("static-access")
     public static void getConfig() {
 
-        Properties properties = new Properties();
-        try {
-            properties.load(new FileInputStream(cfgFile));
-            Core core = new Core();
+        File file = new File(cfgFile);
 
-            core.setInputDir(properties.getProperty("input_directory", ""));
-            core.setOutputFile(properties.getProperty("output_file", ""));
-            core.setFilter(properties.getProperty("filter_string", ""));
-            core.setDateFormat(properties.getProperty("date_format", "default"));
-            core.setSortOrder(properties.getProperty("sort_order", "default"));
-            core.setZipOption(Boolean.parseBoolean(properties.getProperty("compression", "false")));
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
-            System.exit(0);
+        if (file.exists()) {
+
+            Properties properties = new Properties();
+            try {
+                properties.load(new FileInputStream(cfgFile));
+                Core core = new Core();
+
+                core.setInputDir(properties.getProperty("input_directory", ""));
+                core.setOutputFile(properties.getProperty("output_file", ""));
+                core.setFilter(properties.getProperty("filter_string", ""));
+                core.setDateFormat(properties.getProperty("date_format", "default"));
+                core.setSortOrder(properties.getProperty("sort_order", "default"));
+                core.setZipOption(Boolean.parseBoolean(properties.getProperty("compression", "false")));
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+                System.exit(0);
+            }
+        } else {
+            setConfig();
         }
     }
 }
