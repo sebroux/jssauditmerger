@@ -71,9 +71,6 @@
       <SubComponents>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
           <Properties>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
-            </Property>
             <Property name="name" type="java.lang.String" value="jScrollPane1" noResource="true"/>
           </Properties>
           <AuxValues>
@@ -85,12 +82,12 @@
             <Component class="javax.swing.JTextArea" name="jTextArea1">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
-                <Property name="font" type="java.awt.Font" noResource="true" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Arial" size="10" style="1"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="11" style="0"/>
                 </Property>
                 <Property name="lineWrap" type="boolean" value="true"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="&#x9;             JSSAM - JSSAudit Merger&#xa;&#xa;Merge Essbase SSAudit files together (.ATX, .ATG) for a better analysis.&#xa;&#xa;REQUIREMENTS: SUN JRE 1.6 or higher&#xa;&#xa;VERSION: version 1.0&#xa;&#xa;AUTHOR: Proudly coded &amp; released for the Essbase community around the world by Sebastien Roux &lt;roux.sebastien@gmail.com&gt;&#xa;&#xa;SITE: http://code.google.com/p/jssauditmerger/&#xa;&#xa;LICENSE: GNU General Public License version 3 (GPLv3)&#xa;&#xa;NOTES: Use at your own risk! You will be solely responsible for any damage to your computer system or loss of data that may result from the download or the use of the following application." noResource="true"/>
+                <Property name="text" type="java.lang.String" value="&#x9;             JSSAM - JSSAudit Merger&#xa;&#xa;DESCRIPTION: Merge Essbase SSAudit files (.ATX, .ATG) to a single file.&#xa;&#xa;REQUIREMENTS: SUN JRE 1.6 or higher&#xa;&#xa;VERSION: version 0.9&#xa;&#xa;AUTHOR: Proudly coded &amp; released for the Essbase community by Sebastien Roux &lt;roux.sebastien@gmail.com&gt;&#xa;&#xa;SITE: http://code.google.com/p/jssauditmerger/&#xa;&#xa;LICENSE: GNU General Public License version 3 (GPLv3)&#xa;&#xa;NOTES: Use at your own risk! You will be solely responsible for any damage to your computer system or loss of data that may result from the download or the use of the following application." noResource="true"/>
                 <Property name="wrapStyleWord" type="boolean" value="true"/>
                 <Property name="focusable" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="jTextArea1" noResource="true"/>

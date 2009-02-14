@@ -36,15 +36,13 @@ public class About extends javax.swing.JDialog {
         jPanel1.setFocusable(false);
         jPanel1.setName("jPanel1"); // NOI18N
 
-        jScrollPane1.setBorder(null);
         jScrollPane1.setName("jScrollPane1"); // NOI18N
 
-        jTextArea1.setBackground(null);
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("\t             JSSAM - JSSAudit Merger\n\nMerge Essbase SSAudit files together (.ATX, .ATG) for a better analysis.\n\nREQUIREMENTS: SUN JRE 1.6 or higher\n\nVERSION: version 1.0\n\nAUTHOR: Proudly coded & released for the Essbase community around the world by Sebastien Roux <roux.sebastien@gmail.com>\n\nSITE: http://code.google.com/p/jssauditmerger/\n\nLICENSE: GNU General Public License version 3 (GPLv3)\n\nNOTES: Use at your own risk! You will be solely responsible for any damage to your computer system or loss of data that may result from the download or the use of the following application."); // NOI18N
+        jTextArea1.setText("\t             JSSAM - JSSAudit Merger\n\nDESCRIPTION: Merge Essbase SSAudit files (.ATX, .ATG) to a single file.\n\nREQUIREMENTS: SUN JRE 1.6 or higher\n\nVERSION: version 0.9\n\nAUTHOR: Proudly coded & released for the Essbase community by Sebastien Roux <roux.sebastien@gmail.com>\n\nSITE: http://code.google.com/p/jssauditmerger/\n\nLICENSE: GNU General Public License version 3 (GPLv3)\n\nNOTES: Use at your own risk! You will be solely responsible for any damage to your computer system or loss of data that may result from the download or the use of the following application."); // NOI18N
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setFocusable(false);
         jTextArea1.setName("jTextArea1"); // NOI18N
