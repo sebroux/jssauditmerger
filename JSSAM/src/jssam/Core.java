@@ -20,7 +20,7 @@ public class Core {
     /* Filter arg */
     private static String filter = "";
     /* Filter case */
-    private static Boolean filterCaseSensitive = true;
+    //private static Boolean filterCaseSensitive = true;
     /* Sort */
     private static String sortOrder = "default";
     /* Files extensions constants */
@@ -244,6 +244,7 @@ public class Core {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        //Compression
         if (getZipOption().equals(true)) {
             try {
                 zipOutputFile();
@@ -378,7 +379,8 @@ public class Core {
     public static void zipOutputFile() throws IOException {
 
         File source = new File(getOutputFile().toString());
-        String sSource = source.getAbsoluteFile().toString();
+        //String sSource = source.getAbsoluteFile().toString();
+        String sSource = source.toString();
 
         // Create a buffer for reading the files
         byte[] buffer = new byte[1024];
